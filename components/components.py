@@ -12,7 +12,7 @@ class WebElement():
         return self.driver.find_element(By.CSS_SELECTOR, self.locator)
 
     def click(self):
-        self.driver.find_element().click()
+        self.find_element().click()
 
     def exist(self):
         try:
