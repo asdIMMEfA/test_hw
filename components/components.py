@@ -1,15 +1,28 @@
 from selenium.common import NoSuchElementException
 from selenium.webdriver.common.by import By
 import time
-
+import pytest
 class WebElement():
     def __init__(self, driver, locator = ''):
         self.driver = driver
         self.locator = locator
 
-    # переопределение функции find_element
     def find_element(self):
         return self.driver.find_element(By.CSS_SELECTOR, self.locator)
+
+    def find_elements(self):
+        return self.driver.find_elements(By.CSS_SELECTOR, self.locator)
+
+    def check_count_elements(self,count :int) -> bool:
+        if len(self.find_elements()) == count:
+            return True
+        return False
+
+    def count_elements(self):
+        return len(self.find_elements())
+
+    def send_keys(self,text :str):
+        self.find_element().send_keys(text)
 
     def click(self):
         self.find_element().click()

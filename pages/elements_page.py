@@ -30,4 +30,5 @@ class ElementsPage(BasePage):
         self.btn_sidebar_second = WebElement(driver,
                                             'div.element-group:nth-child(2) > span:nth-child(1) > div:nth-child(1)')
 
+        self.btns_first_menu = WebElement(driver, '#app > div > div > div > div:nth-child(1) > div > div > div:nth-child(1) > div > ul > li')
         super().__init__(driver, self.base_url)

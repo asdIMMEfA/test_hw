@@ -13,33 +13,5 @@ class SwagLabs(BasePage):
         self.btn = WebElement(driver, 'div.card:nth-child(1)')
         self.footer = WebElement(driver, '#app > footer:nth-child(3)')
 
-    # def exist_icon(self):
-    #     try:
-    #         self.icon.exist()
-    #     except NoSuchElementException:
-    #         return False
-    #     return True
-    #
-    # def exist_name_field(self):
-    #     try:
-    #         self.name_field.exist()
-    #     except NoSuchElementException:
-    #         return False
-    #     return True
-    #
-    # def exist_login_field(self):
-    #     try:
-    #         self.login_field.exist()
-    #     except NoSuchElementException:
-    #         return False
-    #     return True
-    #
     def click_on_the_btn(self):
         self.btn.find_element().click()
-
-    # def exist_footer(self):
-    #     try:
-    #         self.footer.exist()
-    #     except NoSuchElementException:
-    #         return False
-    #     return True
