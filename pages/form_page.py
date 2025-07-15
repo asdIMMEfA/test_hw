@@ -17,3 +17,14 @@ class FormPage(BasePage):
         self.btn_submit = WebElement(driver, '#submit')
         self.model_dialog = WebElement(driver, 'body > div.fade.modal.show > div')
         self.btn_close_model = WebElement(driver, 'closeLargeModal')
+        self.hobbies = WebElement(driver, '#hobbies')
+        self.current_address = WebElement(driver, '#currentAddress')
+        self.user_form = WebElement(self.driver, '#userForm')
+
+        self.state_dropdown_btn = WebElement(self.driver,
+                                             '#state')
+        self.city_dropdown_btn = WebElement(self.driver,
+                                             '#city')
+
+        self.state_first_item = WebElement(self.driver, '#react-select-3-option-0')
+        self.city_first_item = WebElement(self.driver, '#react-select-4-option-0')
