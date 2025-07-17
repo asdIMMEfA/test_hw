@@ -8,6 +8,7 @@ from selenium.webdriver.remote.webelement import WebElement
 
 
 class WebElement():
+    
     def __init__(self, driver, locator = '',locator_type = 'css'):
         self.locator = locator
         self.driver = driver
@@ -85,3 +86,6 @@ class WebElement():
         else:
             print("Locator type " + self.locator_type + " not correct")
         return False
+
+    def check_css(self, style, value=''):
+        return self.find_element().value_of_css_property(style) == value
