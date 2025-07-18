@@ -18,7 +18,7 @@ def test_check_elements_text(browser):
     demo_qa_page.visit()
     time.sleep(3)
     assert demo_qa_page.equal_url()
-    demo_qa_page.click_on_the_btn()
+    demo_qa_page.btn.click()
     assert elements_page.equal_url()
 
     assert elements_page.label.get_text() == 'Please select an item from left to start practice.'

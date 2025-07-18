@@ -4,11 +4,10 @@ from pages.base_page import BasePage
 from selenium.common import NoSuchElementException
 from components.components import WebElement
 
-class SwagLabs(BasePage):
+class BrowserTab(BasePage):
 
     def __init__(self, driver):
-        self.base_url = 'https://demoqa.com'
+        self.base_url = 'https://demoqa.com/browser-windows'
         super().__init__(driver,self.base_url)
 
-        self.btn = WebElement(driver, 'div.card:nth-child(1)')
-        self.footer = WebElement(driver, '#app > footer:nth-child(3)')
+        self.new_tab = WebElement(driver,'#tabButton')

@@ -9,6 +9,14 @@ class WebTables(BasePage):
         self.base_url = 'https://demoqa.com/webtables'
         super().__init__(driver,self.base_url)
 
+        self.Header_column1 = WebElement(driver,
+                                         'div.rt-th:nth-child(1)')
+        self.Header_column2 = WebElement(driver,
+                                         'div.rt-th:nth-child(2) > div:nth-child(1)')
+        self.Header_column3 = WebElement(driver,
+                                         'div.rt-th:nth-child(1) > div:nth-child(1)')
+        self.Header_column4 = WebElement(driver,
+                                         'div.rt-th:nth-child(1) > div:nth-child(1)')
         self.table_page = WebElement(driver,
                                '.-pageJump > input:nth-child(1)')
         self.add_record = WebElement(driver,
@@ -48,8 +56,20 @@ class WebTables(BasePage):
                                       'div.rt-tr-group:nth-child(1) > div:nth-child(1) > div:nth-child(1)')
         self.tableCell_4 = WebElement(driver,
                                       'div.rt-tr-group:nth-child(4) > div:nth-child(1) > div:nth-child(1)')
+        self.table_head_firstname = WebElement(driver,
+                                               'div.rt-th:nth-child(1)')
+        self.table_head_lastname = WebElement(driver,
+                                              'div.rt-th:nth-child(2)')
+        self.table_head_age = WebElement(driver,
+                                         'div.rt-th:nth-child(3)')
+        self.table_head_email = WebElement(driver,
+                                           'div.rt-th:nth-child(4)')
+        self.table_head_salary = WebElement(driver,
+                                            'div.rt-th:nth-child(5)')
+        self.table_head_departament = WebElement(driver,
+                                                 'div.rt-th:nth-child(6)')
         self.table_body = WebElement(driver,
-                                     '.rt-tbody')
+                                     'div.rt-tr-group:nth-child(1)')
         self.rows_count = WebElement(driver,
                                      '//*[@id="app"]/div/div/div/div[2]/div[2]/div[3]/div[2]/div/div[2]/span[2]/select','xpath')
 
